@@ -1,0 +1,751 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name WortiseSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AdSupport
+import CoreLocation
+import CoreTelephony
+import DeveloperToolsSupport
+import Foundation
+import GoogleMobileAds
+import Swift
+import SwiftUI
+import UIKit
+import UserMessagingPlatform
+import WebKit
+@_exported import WortiseSDK
+import WortiseSDK_Private
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public class WAAppOpenManager : ObjectiveC.NSObject {
+  public var autoReload: Swift.Bool {
+    get
+    set
+  }
+  public var delegate: (any WortiseSDK.WAAppOpenDelegate)? {
+    get
+    set
+  }
+  public var isAvailable: Swift.Bool {
+    get
+  }
+  public var isDestroyed: Swift.Bool {
+    get
+  }
+  public var isShowing: Swift.Bool {
+    get
+  }
+  public var window: UIKit.UIWindow?
+  required public init(adUnitId: Swift.String)
+  public func destroy()
+  public func loadAd()
+  public func showAd()
+  @objc deinit
+}
+extension WortiseSDK.WAAdSize {
+  public static func from(_ value: Swift.String?) -> WortiseSDK.WAAdSize?
+  public static func getAnchoredAdaptiveBannerAdSize(container: UIKit.UIView) -> WortiseSDK.WAAdSize
+  public static func getAnchoredAdaptiveBannerAdSize(width: CoreFoundation.CGFloat) -> WortiseSDK.WAAdSize
+  public static func getInlineAdaptiveBannerAdSize(container: UIKit.UIView, maxHeight: CoreFoundation.CGFloat = 0) -> WortiseSDK.WAAdSize
+  public static func getInlineAdaptiveBannerAdSize(width: CoreFoundation.CGFloat, maxHeight: CoreFoundation.CGFloat = 0) -> WortiseSDK.WAAdSize
+}
+extension WortiseSDK.WAConsentData {
+  public var tcf: WortiseSDK.WATCFString? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class WATCFString : ObjectiveC.NSObject {
+  public var created: Foundation.Date {
+    get
+  }
+  final public let iabString: Swift.String
+  public var lastUpdated: Foundation.Date {
+    get
+  }
+  public func isAccepted(purpose: WortiseSDK.WATCFPurpose) -> Swift.Bool
+  public func isAccepted(purposes: [WortiseSDK.WATCFPurpose]) -> Swift.Bool
+  public func isAccepted(specialFeature: WortiseSDK.WATCFSpecialFeature) -> Swift.Bool
+  public func isAccepted(specialFeatures: [WortiseSDK.WATCFSpecialFeature]) -> Swift.Bool
+  public func isAccepted(vendor: Swift.Int) -> Swift.Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class WAReward : ObjectiveC.NSObject, Swift.Encodable {
+  final public let amount: Swift.Int
+  final public let label: Swift.String?
+  final public let success: Swift.Bool
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@objc public protocol WAGoogleNativeDelegate {
+  @objc optional func didClick(nativeAd: WortiseSDK.WAGoogleNativeAd)
+  @objc optional func didFailToLoad(nativeAd: WortiseSDK.WAGoogleNativeAd, error: WortiseSDK.WAAdError)
+  @objc func didLoad(nativeAd: WortiseSDK.WAGoogleNativeAd, googleNativeAd: GoogleMobileAds.GADNativeAd)
+  @objc optional func didRecord(impression: WortiseSDK.WAGoogleNativeAd)
+}
+@objc public class WAGoogleNativeAd : ObjectiveC.NSObject {
+  final public let adUnitId: Swift.String
+  final public let delegate: any WortiseSDK.WAGoogleNativeDelegate
+  public var nativeAd: GoogleMobileAds.GADNativeAd? {
+    get
+  }
+  public var options: [GoogleMobileAds.GADAdLoaderOptions]?
+  public var rootViewController: UIKit.UIViewController?
+  public init(adUnitId: Swift.String, rootViewController: UIKit.UIViewController? = nil, options: [GoogleMobileAds.GADAdLoaderOptions]? = nil, delegate: any WortiseSDK.WAGoogleNativeDelegate)
+  @objc deinit
+  public func destroy()
+  public func load()
+}
+extension WortiseSDK.WAGoogleNativeAd : GoogleMobileAds.GADNativeAdDelegate {
+  @objc dynamic public func nativeAdDidRecordClick(_ nativeAd: GoogleMobileAds.GADNativeAd)
+  @objc dynamic public func nativeAdDidRecordImpression(_ nativeAd: GoogleMobileAds.GADNativeAd)
+}
+@objc public enum WAAdError : Swift.Int, Swift.Error {
+  case invalidParams
+  case loadFailed
+  case noFill
+  case renderError
+  case serverError
+  case timeout
+  case unspecified
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension WortiseSDK.WAAdError {
+  public var message: Swift.String {
+    get
+  }
+  public var name: Swift.String {
+    get
+  }
+  public static func from(code: Swift.String?) -> WortiseSDK.WAAdError
+}
+extension WortiseSDK.WABannerAd {
+  @_Concurrency.MainActor @preconcurrency public static let autoRefreshDefaultTime: Swift.Double
+  @_Concurrency.MainActor @preconcurrency public static let autoRefreshDisabled: Swift.Double
+  @_Concurrency.MainActor @preconcurrency public static let autoRefreshMaxTime: Swift.Double
+  @_Concurrency.MainActor @preconcurrency public static let autoRefreshMinTime: Swift.Double
+  @_Concurrency.MainActor @preconcurrency public static let autoRefreshUnspecified: Swift.Double
+}
+extension WortiseSDK.WAConsentManager {
+  public var tcf: WortiseSDK.WATCFString? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class WAFullscreenAd : ObjectiveC.NSObject {
+  final public let adUnitId: Swift.String
+  public var isAvailable: Swift.Bool {
+    get
+  }
+  public var isDestroyed: Swift.Bool {
+    get
+  }
+  public var isShowing: Swift.Bool {
+    get
+  }
+  @objc deinit
+  public func destroy()
+  public func loadAd()
+  public func showAd(from controller: UIKit.UIViewController)
+}
+@_inheritsConvenienceInitializers @objc public class WAConsentManager : ObjectiveC.NSObject {
+  public static let shared: WortiseSDK.WAConsentManager
+  public var canCollectData: Swift.Bool {
+    get
+  }
+  public var canRequestPersonalizedAds: Swift.Bool {
+    get
+  }
+  public var current: WortiseSDK.WAConsentData? {
+    get
+  }
+  public var exists: Swift.Bool {
+    get
+  }
+  public func add(delegate: any WortiseSDK.WAConsentDelegate)
+  public func request(_ controller: UIKit.UIViewController, completion: WortiseSDK.WAConsentRequestDelegate? = nil)
+  public func request(ifRequired controller: UIKit.UIViewController, completion: WortiseSDK.WAConsentRequestDelegate? = nil)
+  public func remove(delegate: any WortiseSDK.WAConsentDelegate)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum WAAdEvent : Swift.String {
+  case close
+  case loadFail
+  case showClose
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public protocol WAInterstitialDelegate {
+  @objc optional func didClick(interstitialAd: WortiseSDK.WAInterstitialAd)
+  @objc optional func didDismiss(interstitialAd: WortiseSDK.WAInterstitialAd)
+  @objc optional func didFailToLoad(interstitialAd: WortiseSDK.WAInterstitialAd, error: WortiseSDK.WAAdError)
+  @objc optional func didFailToShow(interstitialAd: WortiseSDK.WAInterstitialAd, error: WortiseSDK.WAAdError)
+  @objc optional func didImpress(interstitialAd: WortiseSDK.WAInterstitialAd)
+  @objc optional func didLoad(interstitialAd: WortiseSDK.WAInterstitialAd)
+  @objc optional func didShow(interstitialAd: WortiseSDK.WAInterstitialAd)
+}
+@_hasMissingDesignatedInitializers @objc public class WAInterstitialAd : WortiseSDK.WAFullscreenAd {
+  public var delegate: (any WortiseSDK.WAInterstitialDelegate)?
+  required public init(adUnitId: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class WAAdSettings : ObjectiveC.NSObject {
+  public static var assetKey: Swift.String? {
+    get
+  }
+  public static var childDirected: Swift.Bool {
+    get
+    set
+  }
+  public static var maxAdContentRating: WortiseSDK.WAAdContentRating? {
+    get
+    set
+  }
+  public static var testEnabled: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+#if compiler(>=5.3) && $RetroactiveAttribute
+extension GoogleMobileAds.GADAdSize : @retroactive Swift.Equatable {
+  public static func == (lhs: GoogleMobileAds.GADAdSize, rhs: GoogleMobileAds.GADAdSize) -> Swift.Bool
+}
+#else
+extension GoogleMobileAds.GADAdSize : Swift.Equatable {
+  public static func == (lhs: GoogleMobileAds.GADAdSize, rhs: GoogleMobileAds.GADAdSize) -> Swift.Bool
+}
+#endif
+public typealias SdkInitializationDelegate = () -> Swift.Void
+@_inheritsConvenienceInitializers @objc public class WortiseAds : ObjectiveC.NSObject {
+  public static let shared: WortiseSDK.WortiseAds
+  public var isInitialized: Swift.Bool {
+    get
+  }
+  public var isReady: Swift.Bool {
+    get
+  }
+  public var version: Swift.String {
+    get
+    set
+  }
+  public func initialize(assetKey: Swift.String, delegate: WortiseSDK.SdkInitializationDelegate? = nil)
+  public func wait(_ delegate: @escaping WortiseSDK.SdkInitializationDelegate)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension WortiseSDK.WAAppOpenAd {
+  public func showAd(from window: UIKit.UIWindow)
+  public func tryToShowAd(from controller: UIKit.UIViewController)
+  public func tryToShowAd(from window: UIKit.UIWindow)
+}
+public struct WAConsentData : Swift.Codable, Swift.Equatable {
+  public let date: Foundation.Date?
+  public let granted: Swift.Bool
+  public let iabString: Swift.String?
+  public let source: Swift.String?
+  public var canCollectData: Swift.Bool {
+    get
+  }
+  public var canRequestPersonalizedAds: Swift.Bool {
+    get
+  }
+  public init(date: Foundation.Date = Date(), granted: Swift.Bool, iabString: Swift.String? = nil, source: Swift.String)
+  public static func == (a: WortiseSDK.WAConsentData, b: WortiseSDK.WAConsentData) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc public protocol WARewardedDelegate {
+  @objc optional func didClick(rewardedAd: WortiseSDK.WARewardedAd)
+  @objc optional func didComplete(rewardedAd: WortiseSDK.WARewardedAd, reward: WortiseSDK.WAReward)
+  @objc optional func didDismiss(rewardedAd: WortiseSDK.WARewardedAd)
+  @objc optional func didFailToLoad(rewardedAd: WortiseSDK.WARewardedAd, error: WortiseSDK.WAAdError)
+  @objc optional func didFailToShow(rewardedAd: WortiseSDK.WARewardedAd, error: WortiseSDK.WAAdError)
+  @objc optional func didImpress(rewardedAd: WortiseSDK.WARewardedAd)
+  @objc optional func didLoad(rewardedAd: WortiseSDK.WARewardedAd)
+  @objc optional func didShow(rewardedAd: WortiseSDK.WARewardedAd)
+}
+@_hasMissingDesignatedInitializers @objc public class WARewardedAd : WortiseSDK.WAFullscreenAd {
+  public var delegate: (any WortiseSDK.WARewardedDelegate)?
+  required public init(adUnitId: Swift.String)
+  @objc deinit
+}
+@objc public enum WAAdContentRating : Swift.Int, Swift.Codable {
+  case g
+  case ma
+  case pg
+  case t
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension WortiseSDK.WAAdContentRating {
+  public var name: Swift.String {
+    get
+  }
+  public static func from(name: Swift.String?) -> WortiseSDK.WAAdContentRating?
+}
+@objc public enum WATCFSpecialFeature : Swift.Int {
+  case preciseGeolocation = 1
+  case scanDeviceCharacteristics = 2
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol WAAppOpenDelegate {
+  @objc optional func didClick(appOpenAd: WortiseSDK.WAAppOpenAd)
+  @objc optional func didDismiss(appOpenAd: WortiseSDK.WAAppOpenAd)
+  @objc optional func didFailToLoad(appOpenAd: WortiseSDK.WAAppOpenAd, error: WortiseSDK.WAAdError)
+  @objc optional func didFailToShow(appOpenAd: WortiseSDK.WAAppOpenAd, error: WortiseSDK.WAAdError)
+  @objc optional func didImpress(appOpenAd: WortiseSDK.WAAppOpenAd)
+  @objc optional func didLoad(appOpenAd: WortiseSDK.WAAppOpenAd)
+  @objc optional func didShow(appOpenAd: WortiseSDK.WAAppOpenAd)
+}
+@_hasMissingDesignatedInitializers @objc public class WAAppOpenAd : WortiseSDK.WAFullscreenAd {
+  public var autoReload: Swift.Bool
+  public var delegate: (any WortiseSDK.WAAppOpenDelegate)?
+  override public var isAvailable: Swift.Bool {
+    get
+  }
+  required public init(adUnitId: Swift.String)
+  @objc deinit
+}
+public enum WAJSONError : Swift.Int, Swift.Error {
+  case unsupportedType
+  case indexOutOfBounds
+  case elementTooDeep
+  case wrongType
+  case notExist
+  case invalidJSON
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension WortiseSDK.WAJSONError : Foundation.CustomNSError {
+  public static var errorDomain: Swift.String {
+    get
+  }
+  public var errorCode: Swift.Int {
+    get
+  }
+  public var errorUserInfo: [Swift.String : Any] {
+    get
+  }
+}
+public enum WAJSONType : Swift.Int {
+  case number
+  case string
+  case bool
+  case array
+  case dictionary
+  case null
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct WAJSON {
+  public init(data: Foundation.Data, options opt: Foundation.JSONSerialization.ReadingOptions = []) throws
+  public init(_ object: Any)
+  public init(parseJSON jsonString: Swift.String)
+  public mutating func merge(with other: WortiseSDK.WAJSON?) throws
+  public func merged(with other: WortiseSDK.WAJSON) throws -> WortiseSDK.WAJSON
+  public var type: WortiseSDK.WAJSONType {
+    get
+  }
+  public var error: WortiseSDK.WAJSONError? {
+    get
+  }
+  public var object: Any {
+    get
+    set
+  }
+  @available(*, unavailable, renamed: "null")
+  public static var nullJSON: WortiseSDK.WAJSON {
+    get
+  }
+  public static var null: WortiseSDK.WAJSON {
+    get
+  }
+}
+public enum Index<T> : Swift.Comparable {
+  case array(Swift.Int)
+  case dictionary(Swift.DictionaryIndex<Swift.String, T>)
+  case null
+  public static func == (lhs: WortiseSDK.Index<T>, rhs: WortiseSDK.Index<T>) -> Swift.Bool
+  public static func < (lhs: WortiseSDK.Index<T>, rhs: WortiseSDK.Index<T>) -> Swift.Bool
+}
+public typealias WAJSONIndex = WortiseSDK.Index<WortiseSDK.WAJSON>
+public typealias WAJSONRawIndex = WortiseSDK.Index<Any>
+extension WortiseSDK.WAJSON : Swift.Collection {
+  public typealias Index = WortiseSDK.WAJSONRawIndex
+  public var startIndex: WortiseSDK.WAJSON.Index {
+    get
+  }
+  public var endIndex: WortiseSDK.WAJSON.Index {
+    get
+  }
+  public func index(after i: WortiseSDK.WAJSON.Index) -> WortiseSDK.WAJSON.Index
+  public subscript(position: WortiseSDK.WAJSON.Index) -> (Swift.String, WortiseSDK.WAJSON) {
+    get
+  }
+  public typealias Element = (Swift.String, WortiseSDK.WAJSON)
+  public typealias Indices = Swift.DefaultIndices<WortiseSDK.WAJSON>
+  public typealias Iterator = Swift.IndexingIterator<WortiseSDK.WAJSON>
+  public typealias SubSequence = Swift.Slice<WortiseSDK.WAJSON>
+}
+public enum WAJSONKey {
+  case index(Swift.Int)
+  case key(Swift.String)
+}
+public protocol WAJSONSubscriptType {
+  var jsonKey: WortiseSDK.WAJSONKey { get }
+}
+extension Swift.Int : WortiseSDK.WAJSONSubscriptType {
+  public var jsonKey: WortiseSDK.WAJSONKey {
+    get
+  }
+}
+extension Swift.String : WortiseSDK.WAJSONSubscriptType {
+  public var jsonKey: WortiseSDK.WAJSONKey {
+    get
+  }
+}
+extension WortiseSDK.WAJSON {
+  public subscript(path: [any WortiseSDK.WAJSONSubscriptType]) -> WortiseSDK.WAJSON {
+    get
+    set
+  }
+  public subscript(path: any WortiseSDK.WAJSONSubscriptType...) -> WortiseSDK.WAJSON {
+    get
+    set
+  }
+}
+extension WortiseSDK.WAJSON : Swift.RawRepresentable {
+  public init?(rawValue: Any)
+  public var rawValue: Any {
+    get
+  }
+  public func rawData(options opt: Foundation.JSONSerialization.WritingOptions = JSONSerialization.WritingOptions(rawValue: 0)) throws -> Foundation.Data
+  public func rawString(_ encoding: Swift.String.Encoding = .utf8, options opt: Foundation.JSONSerialization.WritingOptions = .prettyPrinted) -> Swift.String?
+  public typealias RawValue = Any
+}
+extension WortiseSDK.WAJSON : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension WortiseSDK.WAJSON {
+  public var array: [WortiseSDK.WAJSON]? {
+    get
+  }
+  public var arrayValue: [WortiseSDK.WAJSON] {
+    get
+  }
+  public var arrayObject: [Any]? {
+    get
+    set
+  }
+}
+extension WortiseSDK.WAJSON {
+  public var dictionary: [Swift.String : WortiseSDK.WAJSON]? {
+    get
+  }
+  public var dictionaryValue: [Swift.String : WortiseSDK.WAJSON] {
+    get
+  }
+  public var dictionaryObject: [Swift.String : Any]? {
+    get
+    set
+  }
+}
+extension WortiseSDK.WAJSON {
+  public var bool: Swift.Bool? {
+    get
+    set
+  }
+  public var boolValue: Swift.Bool {
+    get
+    set
+  }
+}
+extension WortiseSDK.WAJSON {
+  public var string: Swift.String? {
+    get
+    set
+  }
+  public var stringValue: Swift.String {
+    get
+    set
+  }
+}
+extension WortiseSDK.WAJSON {
+  public var number: Foundation.NSNumber? {
+    get
+    set
+  }
+  public var numberValue: Foundation.NSNumber {
+    get
+    set
+  }
+}
+extension WortiseSDK.WAJSON {
+  public var null: Foundation.NSNull? {
+    get
+    set
+  }
+  public func exists() -> Swift.Bool
+}
+extension WortiseSDK.WAJSON {
+  public var url: Foundation.URL? {
+    get
+    set
+  }
+}
+extension WortiseSDK.WAJSON {
+  public var double: Swift.Double? {
+    get
+    set
+  }
+  public var doubleValue: Swift.Double {
+    get
+    set
+  }
+  public var float: Swift.Float? {
+    get
+    set
+  }
+  public var floatValue: Swift.Float {
+    get
+    set
+  }
+  public var int: Swift.Int? {
+    get
+    set
+  }
+  public var intValue: Swift.Int {
+    get
+    set
+  }
+  public var uInt: Swift.UInt? {
+    get
+    set
+  }
+  public var uIntValue: Swift.UInt {
+    get
+    set
+  }
+  public var int8: Swift.Int8? {
+    get
+    set
+  }
+  public var int8Value: Swift.Int8 {
+    get
+    set
+  }
+  public var uInt8: Swift.UInt8? {
+    get
+    set
+  }
+  public var uInt8Value: Swift.UInt8 {
+    get
+    set
+  }
+  public var int16: Swift.Int16? {
+    get
+    set
+  }
+  public var int16Value: Swift.Int16 {
+    get
+    set
+  }
+  public var uInt16: Swift.UInt16? {
+    get
+    set
+  }
+  public var uInt16Value: Swift.UInt16 {
+    get
+    set
+  }
+  public var int32: Swift.Int32? {
+    get
+    set
+  }
+  public var int32Value: Swift.Int32 {
+    get
+    set
+  }
+  public var uInt32: Swift.UInt32? {
+    get
+    set
+  }
+  public var uInt32Value: Swift.UInt32 {
+    get
+    set
+  }
+  public var int64: Swift.Int64? {
+    get
+    set
+  }
+  public var int64Value: Swift.Int64 {
+    get
+    set
+  }
+  public var uInt64: Swift.UInt64? {
+    get
+    set
+  }
+  public var uInt64Value: Swift.UInt64 {
+    get
+    set
+  }
+}
+extension WortiseSDK.WAJSON : Swift.Comparable {
+}
+public func == (lhs: WortiseSDK.WAJSON, rhs: WortiseSDK.WAJSON) -> Swift.Bool
+public func <= (lhs: WortiseSDK.WAJSON, rhs: WortiseSDK.WAJSON) -> Swift.Bool
+public func >= (lhs: WortiseSDK.WAJSON, rhs: WortiseSDK.WAJSON) -> Swift.Bool
+public func > (lhs: WortiseSDK.WAJSON, rhs: WortiseSDK.WAJSON) -> Swift.Bool
+public func < (lhs: WortiseSDK.WAJSON, rhs: WortiseSDK.WAJSON) -> Swift.Bool
+extension WortiseSDK.WAJSON : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public typealias WAConsentRequestDelegate = (Swift.Bool) -> Swift.Void
+public protocol WAConsentDelegate : AnyObject {
+  func didConsentChange(_ data: WortiseSDK.WAConsentData)
+}
+@objc public enum WATCFPurpose : Swift.Int {
+  case storeInformation = 1
+  case selectBasicAds = 2
+  case createPersonalisedAds = 3
+  case selectPersonalisedAds = 4
+  case createPersonalisedContent = 5
+  case selectPersonalisedContent = 6
+  case measureAdPerformance = 7
+  case measureContentPerformance = 8
+  case marketResearch = 9
+  case developAndImproveProducts = 10
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class WortiseLog : ObjectiveC.NSObject {
+  @objc public enum Level : Swift.Int {
+    case verbose
+    case debug
+    case info
+    case warn
+    case error
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static var level: WortiseSDK.WortiseLog.Level
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class WAAdSize : ObjectiveC.NSObject {
+  public static let height50: WortiseSDK.WAAdSize
+  public static let height90: WortiseSDK.WAAdSize
+  public static let height250: WortiseSDK.WAAdSize
+  public static let height280: WortiseSDK.WAAdSize
+  public static let matchView: WortiseSDK.WAAdSize
+  public var height: CoreFoundation.CGFloat {
+    get
+  }
+  final public let size: CoreFoundation.CGSize
+  public var width: CoreFoundation.CGFloat {
+    get
+  }
+  required public init(size: CoreFoundation.CGSize)
+  convenience public init(width: CoreFoundation.CGFloat = -1, height: CoreFoundation.CGFloat = -1)
+  @objc deinit
+}
+@objc public protocol WABannerDelegate {
+  @objc optional func didClick(bannerAd: WortiseSDK.WABannerAd)
+  @objc optional func didFailToLoad(bannerAd: WortiseSDK.WABannerAd, error: WortiseSDK.WAAdError)
+  @objc optional func didImpress(bannerAd: WortiseSDK.WABannerAd)
+  @objc optional func didLoad(bannerAd: WortiseSDK.WABannerAd)
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class WABannerAd : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var adHeight: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var adSize: WortiseSDK.WAAdSize
+  @_Concurrency.MainActor @preconcurrency public var adWidth: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var autoRefreshTime: Swift.Double
+  @_Concurrency.MainActor @preconcurrency public var delegate: (any WortiseSDK.WABannerDelegate)?
+  @_Concurrency.MainActor @preconcurrency public var isAutoRefreshEnabled: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var isDestroyed: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var isLoading: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var rootViewController: UIKit.UIViewController? {
+    get
+    set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var adUnitId: Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMoveToWindow()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func destroy()
+  @_Concurrency.MainActor @preconcurrency public func loadAd()
+}
+extension WortiseSDK.WAAdError : Swift.Equatable {}
+extension WortiseSDK.WAAdError : Swift.Hashable {}
+extension WortiseSDK.WAAdError : Swift.RawRepresentable {}
+extension WortiseSDK.WAAdEvent : Swift.Equatable {}
+extension WortiseSDK.WAAdEvent : Swift.Hashable {}
+extension WortiseSDK.WAAdEvent : Swift.RawRepresentable {}
+extension WortiseSDK.WAAdContentRating : Swift.Equatable {}
+extension WortiseSDK.WAAdContentRating : Swift.Hashable {}
+extension WortiseSDK.WAAdContentRating : Swift.RawRepresentable {}
+extension WortiseSDK.WATCFSpecialFeature : Swift.Equatable {}
+extension WortiseSDK.WATCFSpecialFeature : Swift.Hashable {}
+extension WortiseSDK.WATCFSpecialFeature : Swift.RawRepresentable {}
+extension WortiseSDK.WAJSONError : Swift.Equatable {}
+extension WortiseSDK.WAJSONError : Swift.Hashable {}
+extension WortiseSDK.WAJSONError : Swift.RawRepresentable {}
+extension WortiseSDK.WAJSONType : Swift.Equatable {}
+extension WortiseSDK.WAJSONType : Swift.Hashable {}
+extension WortiseSDK.WAJSONType : Swift.RawRepresentable {}
+extension WortiseSDK.WATCFPurpose : Swift.Equatable {}
+extension WortiseSDK.WATCFPurpose : Swift.Hashable {}
+extension WortiseSDK.WATCFPurpose : Swift.RawRepresentable {}
+extension WortiseSDK.WortiseLog.Level : Swift.Equatable {}
+extension WortiseSDK.WortiseLog.Level : Swift.Hashable {}
+extension WortiseSDK.WortiseLog.Level : Swift.RawRepresentable {}

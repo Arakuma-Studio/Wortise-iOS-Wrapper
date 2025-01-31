@@ -1,0 +1,17 @@
+framework module WortiseSDK_Private {
+
+    header "SPTIabPublisherRestriction.h"
+    header "SPTIabTCFApi.h"
+    header "SPTIabTCFConstants.h"
+    header "SPTIabTCFModel.h"
+    header "SPTIabTCFUtils.h"
+    header "SPTIabTCFv1StorageProtocol.h"
+    header "SPTIabTCFv1StorageUserDefaults.h"
+    header "SPTIabTCFv1Types.h"
+    header "SPTIabTCFv2StorageProtocol.h"
+    header "SPTIabTCFv2StorageUserDefaults.h"
+    header "SPTIabTCFv2Types.h"
+    header "SPTIabTCStringParser.h"
+
+    export *
+}

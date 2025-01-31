@@ -1,0 +1,42 @@
+PODS:
+  - FBAudienceNetwork (6.15.2)
+  - Google-Mobile-Ads-SDK (11.13.0):
+    - GoogleUserMessagingPlatform (>= 1.1)
+  - GoogleMobileAdsMediationFacebook (6.15.2.1):
+    - FBAudienceNetwork (= 6.15.2)
+    - Google-Mobile-Ads-SDK (~> 11.0)
+  - GoogleMobileAdsMediationInMobi (10.7.8.0):
+    - Google-Mobile-Ads-SDK (~> 11.0)
+    - InMobiSDK (= 10.7.8)
+  - GoogleUserMessagingPlatform (2.7.0)
+  - InMobiSDK (10.7.8)
+  - WortiseSDK (1.6.1):
+    - Google-Mobile-Ads-SDK (~> 11.0)
+    - GoogleMobileAdsMediationFacebook (= 6.15.2.1)
+    - GoogleMobileAdsMediationInMobi (= 10.7.8.0)
+
+DEPENDENCIES:
+  - WortiseSDK (>= 1.6.1)
+
+SPEC REPOS:
+  trunk:
+    - FBAudienceNetwork
+    - Google-Mobile-Ads-SDK
+    - GoogleMobileAdsMediationFacebook
+    - GoogleMobileAdsMediationInMobi
+    - GoogleUserMessagingPlatform
+    - InMobiSDK
+    - WortiseSDK
+
+SPEC CHECKSUMS:
+  FBAudienceNetwork: 2457a89b45e2596241fd81b0c2fd8cb6f6053869
+  Google-Mobile-Ads-SDK: 14f57f2dc33532a24db288897e26494640810407
+  GoogleMobileAdsMediationFacebook: 03634215ee58e77f39e8c29dc8121840486aebce
+  GoogleMobileAdsMediationInMobi: 1ad0a76ef98c63447095ca3d6340667cc60a35fc
+  GoogleUserMessagingPlatform: a8b56893477f67212fbc8411c139e61d463349f5
+  InMobiSDK: ee53561ba1fd21787b1eb82f02da9b93067ffc8e
+  WortiseSDK: 44c6a67b25348dc6bc8d8c80f0fa2d16a7727e56
+
+PODFILE CHECKSUM: c5a56b0e8c73f9e8c0a527f9e6019fcd589bfdbf
+
+COCOAPODS: 1.16.2

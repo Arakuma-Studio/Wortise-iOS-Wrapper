@@ -1,0 +1,11 @@
+framework module WortiseSDK {
+  umbrella header "WortiseSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module WortiseSDK.Swift {
+  header "WortiseSDK-Swift.h"
+  requires objc
+}

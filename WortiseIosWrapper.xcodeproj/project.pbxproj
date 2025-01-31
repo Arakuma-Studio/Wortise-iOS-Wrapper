@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		513C63E82D4A90CE00CBC1E5 /* WortiseAppOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513C63E72D4A90CE00CBC1E5 /* WortiseAppOpen.swift */; };
+		513C63EA2D4A99F300CBC1E5 /* WortiseBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513C63E92D4A99F300CBC1E5 /* WortiseBanner.swift */; };
+		513C63EC2D4AAA2000CBC1E5 /* WortiseInterstitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513C63EB2D4AAA2000CBC1E5 /* WortiseInterstitial.swift */; };
+		513C63EE2D4AAC5D00CBC1E5 /* WortiseRewarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513C63ED2D4AAC5D00CBC1E5 /* WortiseRewarded.swift */; };
+		517F09962D4C07BD0052F57F /* MetaAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 517F098E2D4C07BC0052F57F /* MetaAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		517F09982D4C07BD0052F57F /* GoogleMobileAds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 517F098F2D4C07BD0052F57F /* GoogleMobileAds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		517F099A2D4C07BD0052F57F /* UserMessagingPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 517F09902D4C07BD0052F57F /* UserMessagingPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		517F099C2D4C07BD0052F57F /* InMobiAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 517F09912D4C07BD0052F57F /* InMobiAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		517F099E2D4C07BD0052F57F /* InMobiSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 517F09922D4C07BD0052F57F /* InMobiSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		517F09A02D4C07BD0052F57F /* FBAudienceNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 517F09932D4C07BD0052F57F /* FBAudienceNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		517F09A22D4C07BD0052F57F /* WortiseSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 517F09942D4C07BD0052F57F /* WortiseSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		517F09A32D4C08B70052F57F /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F09932D4C07BD0052F57F /* FBAudienceNetwork.framework */; };
+		517F09A42D4C08B70052F57F /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F098F2D4C07BD0052F57F /* GoogleMobileAds.framework */; };
+		517F09A52D4C08B70052F57F /* InMobiAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F09912D4C07BD0052F57F /* InMobiAdapter.framework */; };
+		517F09A62D4C08B70052F57F /* InMobiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F09922D4C07BD0052F57F /* InMobiSDK.framework */; };
+		517F09A72D4C08B70052F57F /* MetaAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F098E2D4C07BC0052F57F /* MetaAdapter.framework */; };
+		517F09A82D4C08B70052F57F /* UserMessagingPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F09902D4C07BD0052F57F /* UserMessagingPlatform.framework */; };
+		517F09A92D4C08B70052F57F /* WortiseSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F09942D4C07BD0052F57F /* WortiseSDK.framework */; };
+		517F09AA2D4C08E40052F57F /* FBAudienceNetwork.framework in Sources */ = {isa = PBXBuildFile; fileRef = 517F09932D4C07BD0052F57F /* FBAudienceNetwork.framework */; };
+		517F09AB2D4C08E40052F57F /* GoogleMobileAds.framework in Sources */ = {isa = PBXBuildFile; fileRef = 517F098F2D4C07BD0052F57F /* GoogleMobileAds.framework */; };
+		517F09AC2D4C08E40052F57F /* InMobiAdapter.framework in Sources */ = {isa = PBXBuildFile; fileRef = 517F09912D4C07BD0052F57F /* InMobiAdapter.framework */; };
+		517F09AD2D4C08E40052F57F /* InMobiSDK.framework in Sources */ = {isa = PBXBuildFile; fileRef = 517F09922D4C07BD0052F57F /* InMobiSDK.framework */; };
+		517F09AE2D4C08E40052F57F /* MetaAdapter.framework in Sources */ = {isa = PBXBuildFile; fileRef = 517F098E2D4C07BC0052F57F /* MetaAdapter.framework */; };
+		517F09AF2D4C08E40052F57F /* UserMessagingPlatform.framework in Sources */ = {isa = PBXBuildFile; fileRef = 517F09902D4C07BD0052F57F /* UserMessagingPlatform.framework */; };
+		517F09B02D4C08E40052F57F /* WortiseSDK.framework in Sources */ = {isa = PBXBuildFile; fileRef = 517F09942D4C07BD0052F57F /* WortiseSDK.framework */; };
+		51B6BA912D49A6CD001CFAA0 /* WortiseIosWrapper.docc in Sources */ = {isa = PBXBuildFile; fileRef = 51B6BA8E2D49A6CD001CFAA0 /* WortiseIosWrapper.docc */; };
+		51B6BA922D49A6CD001CFAA0 /* WortiseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B6BA8F2D49A6CD001CFAA0 /* WortiseWrapper.swift */; };
+		51B6BA932D49A6CD001CFAA0 /* WortiseIosWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 51B6BA8D2D49A6CD001CFAA0 /* WortiseIosWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		513C63FF2D4B088400CBC1E5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				517F09982D4C07BD0052F57F /* GoogleMobileAds.framework in Embed Frameworks */,
+				517F099E2D4C07BD0052F57F /* InMobiSDK.framework in Embed Frameworks */,
+				517F09A22D4C07BD0052F57F /* WortiseSDK.framework in Embed Frameworks */,
+				517F099A2D4C07BD0052F57F /* UserMessagingPlatform.framework in Embed Frameworks */,
+				517F09A02D4C07BD0052F57F /* FBAudienceNetwork.framework in Embed Frameworks */,
+				517F099C2D4C07BD0052F57F /* InMobiAdapter.framework in Embed Frameworks */,
+				517F09962D4C07BD0052F57F /* MetaAdapter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		513C63E72D4A90CE00CBC1E5 /* WortiseAppOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WortiseAppOpen.swift; sourceTree = "<group>"; };
+		513C63E92D4A99F300CBC1E5 /* WortiseBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WortiseBanner.swift; sourceTree = "<group>"; };
+		513C63EB2D4AAA2000CBC1E5 /* WortiseInterstitial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WortiseInterstitial.swift; sourceTree = "<group>"; };
+		513C63ED2D4AAC5D00CBC1E5 /* WortiseRewarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WortiseRewarded.swift; sourceTree = "<group>"; };
+		517F098E2D4C07BC0052F57F /* MetaAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaAdapter.framework; path = Frameworks/MetaAdapter.framework; sourceTree = "<group>"; };
+		517F098F2D4C07BD0052F57F /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		517F09902D4C07BD0052F57F /* UserMessagingPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserMessagingPlatform.framework; path = Frameworks/UserMessagingPlatform.framework; sourceTree = "<group>"; };
+		517F09912D4C07BD0052F57F /* InMobiAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InMobiAdapter.framework; path = Frameworks/InMobiAdapter.framework; sourceTree = "<group>"; };
+		517F09922D4C07BD0052F57F /* InMobiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InMobiSDK.framework; path = Frameworks/InMobiSDK.framework; sourceTree = "<group>"; };
+		517F09932D4C07BD0052F57F /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = Frameworks/FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		517F09942D4C07BD0052F57F /* WortiseSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WortiseSDK.framework; path = Frameworks/WortiseSDK.framework; sourceTree = "<group>"; };
+		51B6BA6E2D498EE8001CFAA0 /* WortiseIosWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WortiseIosWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51B6BA8D2D49A6CD001CFAA0 /* WortiseIosWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WortiseIosWrapper.h; sourceTree = "<group>"; };
+		51B6BA8E2D49A6CD001CFAA0 /* WortiseIosWrapper.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = WortiseIosWrapper.docc; sourceTree = "<group>"; };
+		51B6BA8F2D49A6CD001CFAA0 /* WortiseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WortiseWrapper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51B6BA6B2D498EE8001CFAA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517F09A32D4C08B70052F57F /* FBAudienceNetwork.framework in Frameworks */,
+				517F09A42D4C08B70052F57F /* GoogleMobileAds.framework in Frameworks */,
+				517F09A52D4C08B70052F57F /* InMobiAdapter.framework in Frameworks */,
+				517F09A62D4C08B70052F57F /* InMobiSDK.framework in Frameworks */,
+				517F09A72D4C08B70052F57F /* MetaAdapter.framework in Frameworks */,
+				517F09A82D4C08B70052F57F /* UserMessagingPlatform.framework in Frameworks */,
+				517F09A92D4C08B70052F57F /* WortiseSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		517F098D2D4C07BC0052F57F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				517F09932D4C07BD0052F57F /* FBAudienceNetwork.framework */,
+				517F098F2D4C07BD0052F57F /* GoogleMobileAds.framework */,
+				517F09912D4C07BD0052F57F /* InMobiAdapter.framework */,
+				517F09922D4C07BD0052F57F /* InMobiSDK.framework */,
+				517F098E2D4C07BC0052F57F /* MetaAdapter.framework */,
+				517F09902D4C07BD0052F57F /* UserMessagingPlatform.framework */,
+				517F09942D4C07BD0052F57F /* WortiseSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51B6BA642D498EE8001CFAA0 = {
+			isa = PBXGroup;
+			children = (
+				51B6BA902D49A6CD001CFAA0 /* WortiseIosWrapper */,
+				517F098D2D4C07BC0052F57F /* Frameworks */,
+				51B6BA6F2D498EE8001CFAA0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		51B6BA6F2D498EE8001CFAA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51B6BA6E2D498EE8001CFAA0 /* WortiseIosWrapper.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51B6BA902D49A6CD001CFAA0 /* WortiseIosWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				51B6BA8D2D49A6CD001CFAA0 /* WortiseIosWrapper.h */,
+				51B6BA8E2D49A6CD001CFAA0 /* WortiseIosWrapper.docc */,
+				51B6BA8F2D49A6CD001CFAA0 /* WortiseWrapper.swift */,
+				513C63E72D4A90CE00CBC1E5 /* WortiseAppOpen.swift */,
+				513C63E92D4A99F300CBC1E5 /* WortiseBanner.swift */,
+				513C63EB2D4AAA2000CBC1E5 /* WortiseInterstitial.swift */,
+				513C63ED2D4AAC5D00CBC1E5 /* WortiseRewarded.swift */,
+			);
+			path = WortiseIosWrapper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		51B6BA692D498EE8001CFAA0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51B6BA932D49A6CD001CFAA0 /* WortiseIosWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		51B6BA6D2D498EE8001CFAA0 /* WortiseIosWrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51B6BA762D498EE8001CFAA0 /* Build configuration list for PBXNativeTarget "WortiseIosWrapper" */;
+			buildPhases = (
+				51B6BA692D498EE8001CFAA0 /* Headers */,
+				51B6BA6A2D498EE8001CFAA0 /* Sources */,
+				51B6BA6B2D498EE8001CFAA0 /* Frameworks */,
+				51B6BA6C2D498EE8001CFAA0 /* Resources */,
+				513C63FF2D4B088400CBC1E5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WortiseIosWrapper;
+			productName = WortiseIosWrapper;
+			productReference = 51B6BA6E2D498EE8001CFAA0 /* WortiseIosWrapper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51B6BA652D498EE8001CFAA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					51B6BA6D2D498EE8001CFAA0 = {
+						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
+					};
+				};
+			};
+			buildConfigurationList = 51B6BA682D498EE8001CFAA0 /* Build configuration list for PBXProject "WortiseIosWrapper" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 51B6BA642D498EE8001CFAA0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 51B6BA6F2D498EE8001CFAA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51B6BA6D2D498EE8001CFAA0 /* WortiseIosWrapper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51B6BA6C2D498EE8001CFAA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51B6BA6A2D498EE8001CFAA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517F09AA2D4C08E40052F57F /* FBAudienceNetwork.framework in Sources */,
+				517F09AB2D4C08E40052F57F /* GoogleMobileAds.framework in Sources */,
+				517F09AC2D4C08E40052F57F /* InMobiAdapter.framework in Sources */,
+				517F09AD2D4C08E40052F57F /* InMobiSDK.framework in Sources */,
+				517F09AE2D4C08E40052F57F /* MetaAdapter.framework in Sources */,
+				517F09AF2D4C08E40052F57F /* UserMessagingPlatform.framework in Sources */,
+				517F09B02D4C08E40052F57F /* WortiseSDK.framework in Sources */,
+				513C63EC2D4AAA2000CBC1E5 /* WortiseInterstitial.swift in Sources */,
+				513C63E82D4A90CE00CBC1E5 /* WortiseAppOpen.swift in Sources */,
+				513C63EA2D4A99F300CBC1E5 /* WortiseBanner.swift in Sources */,
+				51B6BA912D49A6CD001CFAA0 /* WortiseIosWrapper.docc in Sources */,
+				51B6BA922D49A6CD001CFAA0 /* WortiseWrapper.swift in Sources */,
+				513C63EE2D4AAC5D00CBC1E5 /* WortiseRewarded.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		51B6BA772D498EE8001CFAA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MN3Y8TWVA3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/**",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ArakumaStudio.WortiseIosWrapper;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51B6BA782D498EE8001CFAA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MN3Y8TWVA3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/**",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ArakumaStudio.WortiseIosWrapper;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		51B6BA792D498EE8001CFAA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACH_O_TYPE = mh_dylib;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		51B6BA7A2D498EE8001CFAA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACH_O_TYPE = mh_dylib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51B6BA682D498EE8001CFAA0 /* Build configuration list for PBXProject "WortiseIosWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51B6BA792D498EE8001CFAA0 /* Debug */,
+				51B6BA7A2D498EE8001CFAA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51B6BA762D498EE8001CFAA0 /* Build configuration list for PBXNativeTarget "WortiseIosWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51B6BA772D498EE8001CFAA0 /* Debug */,
+				51B6BA782D498EE8001CFAA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51B6BA652D498EE8001CFAA0 /* Project object */;
+}
