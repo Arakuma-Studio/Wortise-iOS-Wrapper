@@ -1,0 +1,7 @@
+HOW TO BUILD
+1. Clean build folder
+2. Set device to Any iOS device arm64
+3. Click build xd
+4. Move the built framework somewhere else
+5. Enter the framework, go to Frameworks folder, and replace its contents with the content of RealFrameworksToCopy
+6. You can use it now :3
