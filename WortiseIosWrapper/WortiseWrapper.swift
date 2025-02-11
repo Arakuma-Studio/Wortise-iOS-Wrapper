@@ -8,11 +8,15 @@ public typealias UnityCallbackString = @convention(c) (UnsafePointer<CChar>?) ->
 
 class WortiseWrapper
 {
+    var rootView: UIViewController?
+    
     func InitializeWortise(assetKey: UnsafePointer<CChar>, testMode: Int32, contentRating: UnsafePointer<CChar>, onInitialized: @escaping UnityCallback)
     {
         let keyString = String(cString: assetKey)
         let ratingString = String(cString: contentRating)
         let testBool = testMode != 0
+        
+        rootView = GetTopViewController()
         
         WAAdSettings.testEnabled = testBool
         WAAdSettings.childDirected = false
@@ -52,6 +56,11 @@ class WortiseWrapper
     
     func GetTopViewController() -> UIViewController?
     {
+        if let cachedRoot = rootView
+        {
+            return cachedRoot
+        }
+        
         if #available(iOS 13.0, *)
         {
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,

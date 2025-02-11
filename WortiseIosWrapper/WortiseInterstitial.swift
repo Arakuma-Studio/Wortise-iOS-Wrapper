@@ -49,7 +49,7 @@ class WortiseInterstitial
         }
         else
         {
-            NSLog("ERROR! Couldnt find top view for consent!!!!")
+            NSLog("ERROR! Couldnt find top view for interstitial!!!!")
         }
     }
     
@@ -77,7 +77,7 @@ extension WortiseInterstitial : WAInterstitialDelegate
     {
         onDismissedCall?()
         
-        if let parent = dummyView.parent
+        if dummyView.parent != nil
         {
             dummyView.willMove(toParent: nil)
             dummyView.view.removeFromSuperview()
