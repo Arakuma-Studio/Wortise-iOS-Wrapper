@@ -33,18 +33,18 @@ class BannerViewController : UIViewController
         view = PassthroughView()
         modalPresentationStyle = .overFullScreen
         view.backgroundColor = UIColor.clear
-        
-        bannerAd = WABannerAd()
-        bannerAd.adUnitId = self.wBanner.adString
-        bannerAd.adSize = WAAdSize.height50
-        bannerAd.rootViewController = self
-        bannerAd.delegate = self
-        bannerAd.autoRefreshTime = self.wBanner.refreshSeconds
-        bannerAd.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func LoadBanner()
     {
+        bannerAd = WABannerAd(frame: view.frame)
+        bannerAd.adUnitId = wBanner.adString
+        bannerAd.adSize = WAAdSize.height50
+        bannerAd.rootViewController = self
+        bannerAd.delegate = self
+        bannerAd.autoRefreshTime = wBanner.refreshSeconds
+        bannerAd.translatesAutoresizingMaskIntoConstraints = false
+        
         view.addSubview(bannerAd)
         var windowScale: Double = 0;
         
